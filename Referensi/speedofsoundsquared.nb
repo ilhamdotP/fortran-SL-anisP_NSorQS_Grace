@@ -1,0 +1,181 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4825,        172]
+NotebookOptionsPosition[      4366,        151]
+NotebookOutlinePosition[      4708,        166]
+CellTagsIndexPosition[      4665,        163]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["speed of sound squared = w", "Text",
+ CellChangeTimes->{{3.8493228962585974`*^9, 3.849322907757928*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"Ptilde", "-", 
+        RowBox[{"w", 
+         RowBox[{"(", 
+          RowBox[{"\[Rho]", "-", 
+           RowBox[{"4", "B"}]}], ")"}]}]}], ")"}], "2"], "\[Equal]", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "\[Alpha]"}], " ", 
+        SqrtBox[
+         RowBox[{"\[Rho]", "-", "B"}]]}], ")"}], "2"]}], ",", "\[Rho]"}], 
+   "]"}], "//", "Expand"}]], "Input",
+ CellChangeTimes->{{3.84931985260703*^9, 3.8493199163921843`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\[Rho]", "\[Rule]", 
+     RowBox[{
+      RowBox[{"4", " ", "B"}], "+", 
+      FractionBox["Ptilde", "w"], "+", 
+      FractionBox[
+       SuperscriptBox["\[Alpha]", "2"], 
+       RowBox[{"2", " ", 
+        SuperscriptBox["w", "2"]}]], "-", 
+      FractionBox[
+       RowBox[{"\[Alpha]", " ", 
+        SqrtBox[
+         RowBox[{
+          RowBox[{"4", " ", "Ptilde", " ", "w"}], "+", 
+          RowBox[{"12", " ", "B", " ", 
+           SuperscriptBox["w", "2"]}], "+", 
+          SuperscriptBox["\[Alpha]", "2"]}]]}], 
+       RowBox[{"2", " ", 
+        SuperscriptBox["w", "2"]}]]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Rho]", "\[Rule]", 
+     RowBox[{
+      RowBox[{"4", " ", "B"}], "+", 
+      FractionBox["Ptilde", "w"], "+", 
+      FractionBox[
+       SuperscriptBox["\[Alpha]", "2"], 
+       RowBox[{"2", " ", 
+        SuperscriptBox["w", "2"]}]], "+", 
+      FractionBox[
+       RowBox[{"\[Alpha]", " ", 
+        SqrtBox[
+         RowBox[{
+          RowBox[{"4", " ", "Ptilde", " ", "w"}], "+", 
+          RowBox[{"12", " ", "B", " ", 
+           SuperscriptBox["w", "2"]}], "+", 
+          SuperscriptBox["\[Alpha]", "2"]}]]}], 
+       RowBox[{"2", " ", 
+        SuperscriptBox["w", "2"]}]]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.849319902376467*^9, 3.849319916980385*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    FractionBox["Ptilde", "w"], "+", 
+    RowBox[{"4", "B"}], "+", 
+    FractionBox[
+     SuperscriptBox["\[Alpha]", "2"], 
+     RowBox[{"2", " ", 
+      SuperscriptBox["w", "2"]}]], "+", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[Alpha]", 
+       SqrtBox["w"]}], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["w", "2"]}]], 
+     SqrtBox[
+      RowBox[{
+       FractionBox[
+        SuperscriptBox["\[Alpha]", "2"], "w"], "+", 
+       RowBox[{"4", 
+        RowBox[{"(", 
+         RowBox[{"Ptilde", "+", 
+          RowBox[{"3", "w", " ", "B"}]}], ")"}]}]}]]}]}], "\[Equal]", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"2", "w"}]], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"2", "Ptilde"}], "+", 
+       RowBox[{"6", " ", "w", " ", "B"}]}], ")"}]}], "+", "B", "+", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"2", "w"}]], 
+     RowBox[{"(", 
+      RowBox[{
+       FractionBox[
+        SuperscriptBox["\[Alpha]", "2"], "w"], "+", 
+       RowBox[{
+        FractionBox["1", 
+         SqrtBox["w"]], "\[Alpha]", 
+        SqrtBox[
+         RowBox[{
+          FractionBox[
+           SuperscriptBox["\[Alpha]", "2"], "w"], "+", 
+          RowBox[{"4", 
+           RowBox[{"(", 
+            RowBox[{"Ptilde", "+", 
+             RowBox[{"3", " ", "w", " ", "B"}]}], ")"}]}]}]]}]}], ")"}]}]}]}],
+   "//", "Simplify"}]], "Input",
+ CellChangeTimes->{{3.849322327028034*^9, 3.849322529651925*^9}, {
+  3.849322646431409*^9, 3.849322649522196*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.8493225252909184`*^9, 3.8493225301234245`*^9}, 
+   3.8493226503158336`*^9}]
+}, Open  ]]
+},
+WindowSize->{767, 601},
+WindowMargins->{{Automatic, 291}, {Automatic, 44}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 110, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[693, 25, 589, 19, 43, "Input"],
+Cell[1285, 46, 1375, 41, 131, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2697, 92, 1521, 52, 174, "Input"],
+Cell[4221, 146, 129, 2, 31, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
