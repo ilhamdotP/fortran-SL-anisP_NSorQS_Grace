@@ -1,0 +1,115 @@
+size 24 20                              !Sets the size of the paper
+
+set texlabels 1
+
+GS = 1.325*10^(-12)
+MSS = 1.1155*10^(15)
+
+sub photonring x
+   return 10^3/(3*GS*MSS)*x
+end sub
+
+amove 0.5 10.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+        data "TOV/radmass-TOVaniso.dat"          d10=c3,c4 
+		data "nonTOV/radmass_CT=.100D+06_aniso.dat"  d20=c3,c4 
+        data "nonTOV/radmass_CT=.100D+07_aniso.dat"  d30=c3,c4 
+		data "nonTOV/radmass_CT=.100D+08_aniso.dat"  d40=c3,c4 
+        !data "TOV/radmass-TOViso_MIT.dat"          d50=c3,c4 
+		yaxis min 0 max 2.5 dticks 0.5 hei .5
+		xaxis min 2 max 12 dticks 3 hei .5
+        ytitle "$M (M_{\odot})$"  hei .5
+		xtitle "$R ($km$)$" hei .5
+		d10 line lstyle 1 lwidth 0.06 color orange
+		d20 line lstyle 2 lwidth 0.06 color blue
+        d30 line lstyle 3 lwidth 0.06 color red
+        d40 line lstyle 4 lwidth 0.06 color green
+        !d50 line lstyle 5 lwidth 0.06 color yellow
+		let d2 = photonring(x) from 2 to 12	
+		d2 line lstyle 0 lwidth 0.02 color black
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+begin key
+position tl
+hei .4
+ nobox
+line lstyle 1 lwidth 0.06 color orange text "TOV"
+!line lstyle 5 lwidth 0.06 color yellow text "TOV MIT"
+line lstyle 2 lwidth 0.06 color blue  text "$\tilde{c}=10^{5} $m$^2$"
+line lstyle 3 lwidth 0.06 color red   text "$\tilde{c}=10^{6} $m$^2$"
+line lstyle 4 lwidth 0.06 color green text "$\tilde{c}=10^{7} $m$^2$"
+		line lstyle 0 lwidth 0.02 color black			text "Photon ring"
+end key
+
+begin key
+position br
+ hei .4
+nobox
+text "$\sigma=\sigma_{Grace}$"
+! text "$\tilde{C}=Dl_p^2$"
+end key
+
+amove 0.5 0.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+        data "TOV/radmass-TOVaniso.dat"          d10=c2,c4 
+		data "nonTOV/radmass_CT=.100D+06_aniso.dat"  d20=c2,c4 
+        data "nonTOV/radmass_CT=.100D+07_aniso.dat"  d30=c2,c4 
+		data "nonTOV/radmass_CT=.100D+08_aniso.dat"  d40=c2,c4 
+        !data "TOV/radmass-TOViso_MIT.dat"          d50=c2,c4 
+		yaxis min 0 max 2.5 dticks 0.5 hei .5
+		xaxis min 0 max 3.5 dticks 1 hei .5
+        ytitle "$M (M_{\odot})$"  hei .5
+		xtitle "$\rho_c (10^3 $ MeV fm$^{-3})$" hei .5
+		d10 line lstyle 1 lwidth 0.06 color orange
+		d20 line lstyle 2 lwidth 0.06 color blue
+        d30 line lstyle 3 lwidth 0.06 color red
+        d40 line lstyle 4 lwidth 0.06 color green
+        d50 line lstyle 5 lwidth 0.06 color yellow
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+amove 11.5 10.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+        data "TOV/radmass-TOVaniso.dat"          d10=c2,c5 
+		data "nonTOV/radmass_CT=.100D+06_aniso.dat"  d20=c2,c5 
+        data "nonTOV/radmass_CT=.100D+07_aniso.dat"  d30=c2,c5 
+		data "nonTOV/radmass_CT=.100D+08_aniso.dat"  d40=c2,c5 
+        !data "TOV/radmass-TOViso_MIT.dat"          d50=c2,c5
+		yaxis min 0 max 1 dticks 0.25 hei .5
+		xaxis min 0 max 3.5 dticks 1 hei .5
+        ytitle "$2GM/R$"  hei .5
+		xtitle "$\rho_c (10^3 $ MeV fm$^{-3})$" hei .5
+		d10 line lstyle 1 lwidth 0.06 color orange
+		d20 line lstyle 2 lwidth 0.06 color blue
+        d30 line lstyle 3 lwidth 0.06 color red
+        d40 line lstyle 4 lwidth 0.06 color green
+        d50 line lstyle 5 lwidth 0.06 color yellow
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+amove 11.5 0.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+        !data "TOV/radmass-TOVaniso.dat"          d10=c2,c6 
+		data "nonTOV/radmass_CT=.100D+06_aniso.dat"  d20=c2,c6 
+        data "nonTOV/radmass_CT=.100D+07_aniso.dat"  d30=c2,c6 
+		data "nonTOV/radmass_CT=.100D+08_aniso.dat"  d40=c2,c6 
+        !data "TOV/radmass-TOViso_MIT.dat"          d50=c2,c6
+		yaxis min 0 max 10 dticks 2.5 hei .5
+		xaxis min 0 max 3.5 dticks 1 hei .5
+        ytitle "$\Lambda_c (10^{6} $ MeV$^2 $ fm$^{-6})$"  hei .5
+		xtitle "$\rho_c (10^3 $ MeV fm$^{-3})$" hei .5
+		!d10 line lstyle 1 lwidth 0.06 color orange
+		d20 line lstyle 2 lwidth 0.06 color blue
+        d30 line lstyle 3 lwidth 0.06 color red
+        d40 line lstyle 4 lwidth 0.06 color green
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
