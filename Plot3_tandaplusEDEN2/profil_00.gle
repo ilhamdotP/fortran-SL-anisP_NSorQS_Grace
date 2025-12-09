@@ -1,0 +1,159 @@
+size 24 20                              !Sets the size of the paper
+ set texlabels 1
+amove 0.5 10.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+		data "nonTOV/0-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d30=c1,c2 
+		data "nonTOV/1-B=92,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d31=c1,c2 
+		data "nonTOV/2-B=57,BT=92,a4=0.7,a4T=0.7,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d32=c1,c2 
+		data "nonTOV/3-B=92,BT=92,a4=0.7,a4T=0.7,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d33=c1,c2 
+		data "nonTOV/4-B=57,BT=57,a4=0.7,a4T=0.07,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"  d34=c1,c2 
+		data "nonTOV/5-B=57,BT=57,a4=0.7,a4T=0.1,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d35=c1,c2 
+		data "nonTOV/6-B=57,BT=57,a4=0.7,a4T=0.7,w=1,ct=1e0/profil_CT=.100D+01_aniso.dat"       d36=c1,c2 
+		data "nonTOV/7-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e5/profil_CT=.100D+06_aniso.dat"   d37=c1,c2 
+		data "nonTOV/8-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e6/profil_CT=.100D+07_aniso.dat"   d38=c1,c2 
+		data "nonTOV/9-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e7/profil_CT=.100D+08_aniso.dat"   d39=c1,c2 
+		!yaxis min 0 max 300 dticks 100 hei .5
+		!xaxis min 0 max 13 dticks 4 hei .5
+        ytitle "$P ($ MeV fm$^{-3})$"  hei .5
+		xtitle "$r ($km$)$" hei .5
+		d30 line lstyle 0 lwidth 0.06 color red
+		d31 line lstyle 1 lwidth 0.06 color blue
+		d32 line lstyle 2 lwidth 0.06 color deepskyblue
+		d33 line lstyle 3 lwidth 0.06 color navy
+		d34 line lstyle 4 lwidth 0.06 color greenyellow
+		d35 line lstyle 5 lwidth 0.06 color limegreen
+		d36 line lstyle 6 lwidth 0.06 color yellow
+		d37 line lstyle 7 lwidth 0.06 color pink
+		d38 line lstyle 8 lwidth 0.06 color magenta
+		d39 line lstyle 9 lwidth 0.06 color mediumorchid
+        !key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+! set just bc
+! amove xg(6.5) yg(40)
+! tex "$w$=$1/3$" !add 0.1 name sq5b
+
+! set just bc
+! amove xg(12.) yg(75)
+! tex "$w$=$1$" !add 0.1 name sq5b
+
+
+amove 12. 10.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+		data "nonTOV/0-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d30=c1,c3 
+		data "nonTOV/1-B=92,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d31=c1,c3 
+		data "nonTOV/2-B=57,BT=92,a4=0.7,a4T=0.7,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d32=c1,c3 
+		data "nonTOV/3-B=92,BT=92,a4=0.7,a4T=0.7,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d33=c1,c3 
+		data "nonTOV/4-B=57,BT=57,a4=0.7,a4T=0.07,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"  d34=c1,c3 
+		data "nonTOV/5-B=57,BT=57,a4=0.7,a4T=0.1,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d35=c1,c3 
+		data "nonTOV/6-B=57,BT=57,a4=0.7,a4T=0.7,w=1,ct=1e0/profil_CT=.100D+01_aniso.dat"       d36=c1,c3 
+		data "nonTOV/7-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e5/profil_CT=.100D+06_aniso.dat"   d37=c1,c3 
+		data "nonTOV/8-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e6/profil_CT=.100D+07_aniso.dat"   d38=c1,c3 
+		data "nonTOV/9-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e7/profil_CT=.100D+08_aniso.dat"   d39=c1,c3 
+		!yaxis min 0 max 3 dticks 1 hei .5
+		!xaxis min 0 max 13 dticks 4 hei .5
+        ytitle "$m (M_{\odot})$"  hei .5
+		xtitle "$r ($km$)$" hei .5
+		d30 line lstyle 0 lwidth 0.06 color red
+		d31 line lstyle 1 lwidth 0.06 color blue
+		d32 line lstyle 2 lwidth 0.06 color deepskyblue
+		d33 line lstyle 3 lwidth 0.06 color navy
+		d34 line lstyle 4 lwidth 0.06 color greenyellow
+		d35 line lstyle 5 lwidth 0.06 color limegreen
+		d36 line lstyle 6 lwidth 0.06 color yellow
+		d37 line lstyle 7 lwidth 0.06 color pink
+		d38 line lstyle 8 lwidth 0.06 color magenta
+		d39 line lstyle 9 lwidth 0.06 color mediumorchid
+		!key pos tl hei 0.4
+end graph 
+
+
+
+begin key
+position tl
+ hei .2
+nobox
+		line lstyle 0 lwidth 0.06 color red             text "0-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e0"
+		line lstyle 1 lwidth 0.06 color blue            text "1-B=92,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e0"
+		line lstyle 2 lwidth 0.06 color deepskyblue     text "2-B=57,BT=92,a4=0.7,a4T=0.7,w=0.333,ct=1e0"
+		line lstyle 3 lwidth 0.06 color navy            text "3-B=92,BT=92,a4=0.7,a4T=0.7,w=0.333,ct=1e0"
+		line lstyle 4 lwidth 0.06 color greenyellow     text "4-B=57,BT=57,a4=0.7,a4T=0.07,w=0.333,ct=1e0"
+		line lstyle 5 lwidth 0.06 color limegreen       text "5-B=57,BT=57,a4=0.7,a4T=0.1,w=0.333,ct=1e0"
+		line lstyle 6 lwidth 0.06 color yellow          text "6-B=57,BT=57,a4=0.7,a4T=0.7,w=1,ct=1e0"
+		line lstyle 7 lwidth 0.06 color pink            text "7-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e5"
+		line lstyle 8 lwidth 0.06 color magenta         text "8-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e6"
+		line lstyle 9 lwidth 0.06 color mediumorchid    text "9-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e7"
+end key
+
+begin key
+position br
+ hei .4
+nobox
+text "$\sigma=\sigma_{Grace}$"
+! text "$C^~=Dl_p^2$"
+end key
+
+
+
+amove 0.5 0.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+		data "nonTOV/0-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d30=c1,c7 
+		data "nonTOV/1-B=92,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d31=c1,c7 
+		data "nonTOV/2-B=57,BT=92,a4=0.7,a4T=0.7,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d32=c1,c7 
+		data "nonTOV/3-B=92,BT=92,a4=0.7,a4T=0.7,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d33=c1,c7 
+		data "nonTOV/4-B=57,BT=57,a4=0.7,a4T=0.07,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"  d34=c1,c7 
+		data "nonTOV/5-B=57,BT=57,a4=0.7,a4T=0.1,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d35=c1,c7 
+		data "nonTOV/6-B=57,BT=57,a4=0.7,a4T=0.7,w=1,ct=1e0/profil_CT=.100D+01_aniso.dat"       d36=c1,c7 
+		data "nonTOV/7-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e5/profil_CT=.100D+06_aniso.dat"   d37=c1,c7 
+		data "nonTOV/8-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e6/profil_CT=.100D+07_aniso.dat"   d38=c1,c7 
+		data "nonTOV/9-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e7/profil_CT=.100D+08_aniso.dat"   d39=c1,c7 
+		!yaxis min -80 max 0 dticks 20 hei .5
+		!xaxis min 0 max 13 dticks 4 hei .5
+		ytitle "$\sigma ($ MeV fm$^{-3})$"  hei .5
+		xtitle "$r ($km$)$" hei .5
+		d30 line lstyle 0 lwidth 0.06 color red
+		d31 line lstyle 1 lwidth 0.06 color blue
+		d32 line lstyle 2 lwidth 0.06 color deepskyblue
+		d33 line lstyle 3 lwidth 0.06 color navy
+		d34 line lstyle 4 lwidth 0.06 color greenyellow
+		d35 line lstyle 5 lwidth 0.06 color limegreen
+		d36 line lstyle 6 lwidth 0.06 color yellow
+		d37 line lstyle 7 lwidth 0.06 color pink
+		d38 line lstyle 8 lwidth 0.06 color magenta
+		d39 line lstyle 9 lwidth 0.06 color mediumorchid
+        !key pos tl hei 0.4
+end graph 
+
+amove 12. 0.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+		data "nonTOV/0-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d30=c1,c5 
+		data "nonTOV/1-B=92,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d31=c1,c5 
+		data "nonTOV/2-B=57,BT=92,a4=0.7,a4T=0.7,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d32=c1,c5 
+		data "nonTOV/3-B=92,BT=92,a4=0.7,a4T=0.7,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d33=c1,c5 
+		data "nonTOV/4-B=57,BT=57,a4=0.7,a4T=0.07,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"  d34=c1,c5 
+		data "nonTOV/5-B=57,BT=57,a4=0.7,a4T=0.1,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d35=c1,c5 
+		data "nonTOV/6-B=57,BT=57,a4=0.7,a4T=0.7,w=1,ct=1e0/profil_CT=.100D+01_aniso.dat"       d36=c1,c5 
+		data "nonTOV/7-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e5/profil_CT=.100D+06_aniso.dat"   d37=c1,c5 
+		data "nonTOV/8-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e6/profil_CT=.100D+07_aniso.dat"   d38=c1,c5 
+		data "nonTOV/9-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e7/profil_CT=.100D+08_aniso.dat"   d39=c1,c5 
+		!yaxis min -0.5 max 0.3 dticks 0.2 hei .5
+		!xaxis min 0 max 13 dticks 4 hei .5
+		ytitle "$\Lambda (10^{6} $ MeV$^2$ fm$^{-6})$"  hei .5
+        xtitle "$r ($km$)$" hei .5
+		d30 line lstyle 0 lwidth 0.06 color red
+		d31 line lstyle 1 lwidth 0.06 color blue
+		d32 line lstyle 2 lwidth 0.06 color deepskyblue
+		d33 line lstyle 3 lwidth 0.06 color navy
+		d34 line lstyle 4 lwidth 0.06 color greenyellow
+		d35 line lstyle 5 lwidth 0.06 color limegreen
+		d36 line lstyle 6 lwidth 0.06 color yellow
+		d37 line lstyle 7 lwidth 0.06 color pink
+		d38 line lstyle 8 lwidth 0.06 color magenta
+		d39 line lstyle 9 lwidth 0.06 color mediumorchid
+        !key pos tl hei 0.4
+end graph 

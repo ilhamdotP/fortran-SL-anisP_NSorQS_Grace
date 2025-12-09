@@ -1,0 +1,74 @@
+size 12 20                             !Sets the size of the paper
+
+set texlabels 1
+
+amove 0.5 10.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+		data "nonTOV/0-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e0/profil_CT=.100D+01_aniso.dat"   d30=c1,c5 
+		data "nonTOV/7-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e5/profil_CT=.100D+06_aniso.dat"   d37=c1,c5 
+		data "nonTOV/8-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e6/profil_CT=.100D+07_aniso.dat"   d38=c1,c5 
+		data "nonTOV/9-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e7/profil_CT=.100D+08_aniso.dat"   d39=c1,c5 
+		yaxis min 0 max 1.1 dticks 0.25 hei .5
+		xaxis min 0 max 11 dticks 3 hei .5
+		ytitle "$\Lambda (10^{6} $ MeV$^2$ fm$^{-6})$"  hei .5
+        xtitle "$r ($km$)$" hei .5
+		d30 line lstyle 0 lwidth 0.06 color red
+		d37 line lstyle 7 lwidth 0.06 color pink
+		d38 line lstyle 8 lwidth 0.06 color magenta
+		d39 line lstyle 9 lwidth 0.06 color mediumorchid
+        !key pos tl hei 0.4
+end graph 
+
+begin key
+position bl
+hei .3
+ nobox
+  text "$P_c=300$ MeV/fm$^3$"
+end key
+
+begin key
+position br
+hei .3
+ nobox
+  text "(a)"
+end key
+
+amove 0.5 0.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+		data "nonTOV/0-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e0/radmass_CT=.100D+01_aniso.dat"   d30=c2,c6 
+		data "nonTOV/7-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e5/radmass_CT=.100D+06_aniso.dat"   d37=c2,c6 
+		data "nonTOV/8-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e6/radmass_CT=.100D+07_aniso.dat"   d38=c2,c6 
+		data "nonTOV/9-B=57,BT=57,a4=0.7,a4T=0.7,w=0.333,ct=1e7/radmass_CT=.100D+08_aniso.dat"   d39=c2,c6 
+		yaxis min 0 max 2.5 dticks 0.5 hei .5
+		xaxis min .2 max 1.8 dticks .4 hei .5
+        ytitle "$\Lambda_c (10^{6} $ MeV$^2 $ fm$^{-6})$"  hei .5
+		xtitle "$\rho_c (10^3 $ MeV fm$^{-3})$" hei .5
+		d30 line lstyle 0 lwidth 0.06 color red
+		d37 line lstyle 7 lwidth 0.06 color pink
+		d38 line lstyle 8 lwidth 0.06 color magenta
+		d39 line lstyle 9 lwidth 0.06 color mediumorchid
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+begin key
+position tl
+hei .3
+ nobox
+  text "$B=B_{\perp}=57$ MeV, $a_{4}=a_{4\perp}=0.7,w=1/3$"
+		line lstyle 0 lwidth 0.06 color red             text "$\tilde{c}=1$ m"
+		line lstyle 7 lwidth 0.06 color pink            text "$\tilde{c}=10^5$ m"
+		line lstyle 8 lwidth 0.06 color magenta         text "$\tilde{c}=10^6$ m"
+		line lstyle 9 lwidth 0.06 color mediumorchid    text "$\tilde{c}=10^7$ m"
+end key
+
+
+
+begin key
+position br
+hei .3
+ nobox
+  text "(b)"
+end key
