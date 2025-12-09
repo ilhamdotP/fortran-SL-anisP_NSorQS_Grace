@@ -1,0 +1,79 @@
+size 24 20                              !Sets the size of the paper
+
+set texlabels 1
+
+amove 0.5 10.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+        data "TOV/radmass-TOVaniso_BagC=57,BagCT=57.dat"          d10=c3,c4 
+        data "TOV/radmass-TOVaniso_BagC=57,BagCT=57_TOV.dat"      d30=c3,c4 
+		!yaxis min 0 max 3 dticks 1 hei .5
+		!xaxis min 2 max 15 dticks 3 hei .5
+        ytitle "$M (M_{\odot})$"  hei .5
+		xtitle "$R ($km$)$" hei .5
+		d10 line lstyle 1 lwidth 0.06 color orange
+        d30 line lstyle 3 lwidth 0.06 color red
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+begin key
+position tl
+hei .4
+ nobox
+line lstyle 1 lwidth 0.06 color orange text "TOV grace"
+line lstyle 3 lwidth 0.06 color red   text "TOV MIT"
+end key
+
+begin key
+position br
+ hei .4
+nobox
+text "$\sigma=\sigma_{Grace}$"
+! text "$\tilde{C}=Dl_p^2$"
+end key
+
+amove 0.5 0.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+        data "TOV/radmass-TOVaniso_BagC=57,BagCT=57.dat"          d10=c2,c4 
+        data "TOV/radmass-TOVaniso_BagC=57,BagCT=57_TOV.dat"      d30=c2,c4 
+		!yaxis min 0 max 3 dticks 1 hei .5
+		!xaxis min .2 max 2.1 dticks .5 hei .5
+        ytitle "$M (M_{\odot})$"  hei .5
+		xtitle "$\rho_c (10^3 $ MeV fm$^{-3})$" hei .5
+		d10 line lstyle 1 lwidth 0.06 color orange
+        d30 line lstyle 3 lwidth 0.06 color red
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+amove 11.5 10.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+        data "TOV/radmass-TOVaniso_BagC=57,BagCT=57.dat"          d10=c2,c5 
+        data "TOV/radmass-TOVaniso_BagC=57,BagCT=57_TOV.dat"      d30=c2,c5 
+		!yaxis min 0 max 1 dticks 0.33 hei .5
+		!xaxis min .2 max 2.1 dticks .5 hei .5
+        ytitle "$2GM/R$"  hei .5
+		xtitle "$\rho_c (10^3 $ MeV fm$^{-3})$" hei .5
+		d10 line lstyle 1 lwidth 0.06 color orange
+        d30 line lstyle 3 lwidth 0.06 color red
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+amove 11.5 0.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+        !data "TOV/radmass-TOVaniso_BagC=57,BagCT=57.dat"          d10=c2,c6 
+        !data "TOV/radmass-TOVaniso_BagC=57,BagCT=57_TOV.dat"      d30=c2,c6 
+		!yaxis min -2 max 1.5 dticks 1 hei .5
+		!xaxis min .2 max 2.1 dticks .5 hei .5
+        ytitle "$\Lambda_c (10^{6} $ MeV$^2 $ fm$^{-6})$"  hei .5
+		xtitle "$\rho_c (10^3 $ MeV fm$^{-3})$" hei .5
+		!d10 line lstyle 1 lwidth 0.06 color orange
+        d30 line lstyle 3 lwidth 0.06 color red
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
